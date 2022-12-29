@@ -1,0 +1,347 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Roboto:wght@300;400;700&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+}
+html,
+body {
+  height: 100%;
+  overflow-x: hidden;
+  background-color: #17212f;
+  font-family: 'Poppins';
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background: -webkit-linear-gradient(#1c397e, rgba(0, 0, 0, 0) 90%), -webkit-linear-gradient(-45deg, #C2553C 25%, #000 75%);
+  background: linear-gradient(#000000, rgba(0, 0, 0, 0) 90%), linear-gradient(-45deg, #C2553C 25%, #1c397e 89%);
+  /*если что эту анимейшин можешь убрать вот здесь начинается*/
+    background-size: 120% 120%;
+    -webkit-animation: Animation 100s alternate infinite;
+    animation: Animation 100s alternate infinite;
+}
+
+@-webkit-keyframes Animation {
+  0%{background-position:10% 0%}
+  50%{background-position:56% 100%}
+  100%{background-position:10% 0%}
+}
+@keyframes Animation { 
+  0%{background-position:10% 0%}
+  50%{background-position:76% 100%}
+  100%{background-position:10% 0%}
+}
+/*а здесь заканчивается анимейшин*/
+main {
+  flex: 1 0 auto;
+  padding-top: 0px;
+}
+.about-community {
+  padding-top: 50px;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+.about-lang {
+  color: white;
+  padding-top: 5px;
+}
+.main-logo {
+  display: flex;
+  max-width: 40%;
+  object-fit: contain;
+}
+.main-page {
+  margin: 50px;
+}
+footer {
+  background-color: #121a26;
+  color: white;
+  flex: 0 0 auto;
+  height: 60px;
+  align-items: center;
+  opacity: 0.3;
+  box-shadow: 0px 5px 10px 0px rgb(17, 17, 17);
+}
+.footer-text {
+  padding-top: 15px;
+}
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+.container {
+  max-width: 1000px;
+  width: 100%;
+  margin: auto;
+}
+/*navbar*/
+.navbar input[type="checkbox"],
+#menu__toggle:checked+.menu__btn>span {
+  transform: rotate(45deg);
+}
+#menu__toggle:checked+.menu__btn>span::before {
+  top: 0;
+  transform: rotate(0deg);
+}
+#menu__toggle:checked+.menu__btn>span::after {
+  top: 0;
+  transform: rotate(90deg);
+}
+#menu__toggle:checked~.menu__box {
+  left: 0 !important;
+}
+.menu__btn {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  width: 26px;
+  height: 26px;
+  cursor: pointer;
+  z-index: 1;
+}
+.menu__btn>span,
+.menu__btn>span::before,
+.menu__btn>span::after {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #ffffff;
+  transition-duration: .25s;
+}
+.menu__btn>span::before {
+  content: '';
+  top: -8px;
+}
+.menu__btn>span::after {
+  content: '';
+  top: 8px;
+}
+.navbar {
+  position: fixed;
+  width: 100%;
+  color: #000;
+  opacity: 0.85;
+  height: 50px;
+  z-index: 12;
+}
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  height: 64px;
+  align-items: center;
+}
+#menu__toggle:checked~.menu__btn{
+  transform: translate(640%);
+}
+.menu__btn{transition: 0.5s ease-out;}
+#menu__toggle {
+
+  opacity: 0;
+}
+#menu__toggle:checked~.menu {
+  transform: translate(-100%);
+}
+.menu-items {
+  order: 2;
+  display: flex;
+}
+.menu-items li {
+  list-style: none;
+  position: relative;
+  margin-left: 1.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+.menu-items a {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  font-weight: 500;
+  transition: color 0.3s ease-in-out;
+}
+.menu-items b {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  font-weight: 1;
+  font-size: x-small;
+}
+.menu .menu-items a:hover {
+  color: #31e6c1;
+  transition: color 0.3s ease-in-out;
+}
+.items {
+  order: 2;
+  display: flex;
+}
+.items li {
+  list-style: none;
+  position: relative;
+  margin-left: 1.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+.items a {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  font-weight: 500;
+  transition: color 0.3s ease-in-out;
+}
+.items a:hover {
+  color: #31e6c1;
+  transition: color 0.3s ease-in-out;
+}
+.menu {
+  position: absolute;
+  transform: translate(-220%);
+  background-color: #121a26;
+  transition: 0.5s ease-in-out;
+  width: 200px;
+  height: 3000%;
+  display: flex;
+  z-index: 9999999;
+}
+.menu-items {
+  padding-top: 400%;
+  opacity: 0.85;
+  flex-direction: column;
+  margin-left: 30px;
+  padding-left: 5px;
+}
+/*sections*/
+div.codeexpl {
+  width: 40%;
+  background-color: rgba(54, 54, 54, 0);
+  text-align: center;
+  padding: 10px 20px;
+  border-radius: 5%;
+}
+.codeexpl img {
+  border-radius: 2%;
+  width: 85%
+}
+.dev-ers {
+  padding-top: 20%;
+}
+.ide-sec {
+  padding-top: 10%;
+}
+.about-sec {
+  padding-top: 10%;
+}
+.text {
+  color: #fff;
+}
+
+/*Live Code Editor*/
+.livecode {
+  margin-left: 20%;
+  margin-right: 20%;
+  background-color: #151e332c;
+  border-radius: 10px;
+  border: 0px solid #ffffff;
+}
+.lci{
+  height: 200px;
+  border-radius: 10px;
+  flex-direction:row;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  border: 0px solid #ffffff;
+}
+.livecode .title {
+  color: #ffffff;
+  margin-left: 5px;
+}
+.lci .editor {
+  height: 100%;
+  background-color: #30303096;
+  width: 60%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  float: left;
+  white-space: pre;
+  box-shadow: 0 1px 1px rgb(22, 22, 22);
+  outline: none;
+  padding: 0.4rem;
+  border-right: #ffffff;
+}
+.lci .output {
+  height: 100%;
+  background-color: #30303096;
+  width: 40%;
+  float: left;
+  overflow-y: auto;
+  white-space: pre;
+  right: 0;
+  box-shadow: 0 1px 1px rgb(22, 22, 22);
+  padding: 0.4rem;
+}
+@media (max-width: 750px) {
+
+  .items {
+    transform: translate(200%);
+  }
+
+  #menu__toggle:checked~.menu {
+    transform: translate(-20%);
+  }
+  .livecode{
+    margin-left: 2%; margin-right: 2%;
+  }
+  .lci{
+    height: 150px;
+  }
+  #menu__toggle:checked~.menu__btn{
+    transform: translate(560%);
+  }
+  .menu-items li {
+    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+  }
+
+  @media (max-width: 500px) {
+    html {
+      font-size: 0.8rem;
+    }
+
+    div.codeexpl {
+      width: 100%;
+      background-color: rgba(54, 54, 54, 0);
+      text-align: center;
+      padding: 5px 10px;
+      border-radius: 5%;
+    }
+
+    .main-logo {
+      display: flex;
+      max-width: 80%;
+      object-fit: contain;
+    }
+
+    .codeexpl img {
+      border-radius: 2%;
+      width: 100%
+    }
+
+    .menu-items li {
+      font-size: 1rem;
+    }
+
+    .menu-items ul {
+      background-color: #121a26;
+      opacity: 5px;
+    }
+
+    .menu-items li {
+      margin-bottom: 2.5rem;
+      font-size: 1rem;
+      font-weight: 500;
+    }
+  }
+}
