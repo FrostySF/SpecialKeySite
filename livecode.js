@@ -1,1 +1,10 @@
-//если ты шаришь то сделай это
+//editor
+var editor = ace.edit("editor");
+editor.setTheme("ace/theme/twilight");
+editor.getSession().setMode("ace/mode/spk");
+editor.getSession().setUseSoftTabs(true);
+//output
+var output = ace.edit("output");
+output.setTheme("ace/theme/twilight");
+output.renderer.setShowGutter(false);
+output.setReadOnly(true);

@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="assets/logo.png" type="image/png">
     <title>Special-Key</title>
+    <script src="lib/ace/ace.js" type="text/javascript" charset="utf-8"></script>
 </head>
 
 <body>
@@ -48,11 +49,15 @@
                     <div class="codeexpl"><img src="assets/code.png">Screenshot for example</div>
                 </div>
                 <div class="livecode">
-                    <div class="title">Live Code</div>
+                    <div class="titles">
+                        <div class="title">Live Code</div>
+                        <div class="title-output">Output</div>
+                    </div>
                     <div class="lci">
-                        <div class="editor"></div>
-                        <div class="output"></div>
-                    </div>   
+                        <div class="editor" id="editor"></div>
+                        <div class="output" id="output"></div>
+                        <script src="livecode.js"></script>
+                    </div>
                 </div>
             </div>
         </section>
@@ -80,6 +85,6 @@
             <a>2022 &copy; TiM-SyStEm</a>
         </div>
     </footer>
-    <script src="livecode.js"></script>
 </body>
+
 </html>
