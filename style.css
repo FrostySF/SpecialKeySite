@@ -267,18 +267,6 @@ footer {
 }
 
 /*sections*/
-div.codeexpl {
-  width: 40%;
-  background-color: rgba(54, 54, 54, 0);
-  text-align: center;
-  padding: 10px 20px;
-  border-radius: 5%;
-}
-
-.codeexpl img {
-  border-radius: 2%;
-  width: 85%
-}
 
 .dev-ers {
   padding-top: 20%;
@@ -298,6 +286,7 @@ div.codeexpl {
 
 /*Live Code Editor*/
 .livecode {
+  margin-top: 5%;
   margin-left: 20%;
   margin-right: 20%;
   background-color: #151e332c;
