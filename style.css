@@ -449,7 +449,10 @@ footer {
               #menu__toggle:checked~.menu {
                 transform: translate(-10%);
               }
-
+              .livecode{
+                margin-left: 2%;
+                margin-right: 2%;
+              }
               .navbar {
                 padding-left: 20px;
                 padding-right: 40px;
