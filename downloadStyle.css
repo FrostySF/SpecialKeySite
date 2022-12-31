@@ -86,32 +86,6 @@ footer {
     align-items: center;
   }
 
-.items {
-    order: 2;
-    display: flex;
-    transform: translate(400%);
-}
-
-.items li {
-    list-style: none;
-    position: relative;
-    margin-left: 1.5rem;
-    margin-bottom: 0.5rem;
-    font-size: 1.2rem;
-}
-
-.items a {
-    text-decoration: none;
-    color: rgb(255, 255, 255);
-    font-weight: 500;
-    transition: color 0.3s ease-in-out;
-}
-
-.items a:hover {
-    color: #31e6c1;
-    transition: color 0.3s ease-in-out;
-}
-
 .arrow {
     width: 2vmin;
     height: 2vmin;
@@ -160,7 +134,7 @@ footer {
 
 }
 .releases{
-    margin: 20%;
+    margin: 5% 20% 5% 20%;
     padding: 5%;
     padding-left: 15%;
     padding-right: 15%;
@@ -168,7 +142,6 @@ footer {
     border-radius: 2%;
     box-shadow: 0px 10px 20px -10px rgba(0,0,0,0.75);
     max-width: 100%;
-    padding-top: 10px;
     position: relative;
     text-align: center;
 }
@@ -180,7 +153,7 @@ footer {
     padding-top: 10px;
     height: 200px;
     position: relative;
-    width: 400px;
+    width: 1000px;
     max-width: 100%;
     text-align: center;
     margin-bottom: 10px;
@@ -213,4 +186,16 @@ footer {
 }
 .logo{
 width: 100px;
+}
+@media(max-width:800px){ 
+    .releases{
+    margin-left: 2%;
+    margin-right: 2%;
+    padding-left: 2%;
+    padding-right: 2%;
+    height:600px;
+}
+.card{
+    height:250px;
+}
 }
