@@ -209,12 +209,14 @@ footer {
   font-weight: 500;
   transition: color 0.3s ease-in-out;
 }
-
-.menu-items b {
+.menu-items .medeby{
   text-decoration: none;
   color: rgb(255, 255, 255);
   font-weight: 1;
   font-size: x-small;
+}
+.menu .menu-items .medeby:hover {
+  color: #ffffff;
 }
 
 .menu .menu-items a:hover {

@@ -1,0 +1,216 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Roboto:wght@300;400;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html,
+body {
+    height: 100%;
+    overflow-x: hidden;
+    background-color: #17212f;
+    font-family: 'Poppins';
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background: -webkit-linear-gradient(#1c397e, rgba(0, 0, 0, 0) 90%), -webkit-linear-gradient(-45deg, #C2553C 25%, #000 75%);
+    background: linear-gradient(#000000, rgba(0, 0, 0, 0) 90%), linear-gradient(-45deg, #C2553C 25%, #1c397e 89%);
+    /*если что эту анимейшин можешь убрать вот здесь начинается*/
+    background-size: 120% 120%;
+    -webkit-animation: Animation 100s alternate infinite;
+    animation: Animation 100s alternate infinite;
+}
+
+@-webkit-keyframes Animation {
+    0% {
+        background-position: 10% 0%
+    }
+
+    50% {
+        background-position: 56% 100%
+    }
+
+    100% {
+        background-position: 10% 0%
+    }
+}
+
+@keyframes Animation {
+    0% {
+        background-position: 10% 0%
+    }
+
+    50% {
+        background-position: 76% 100%
+    }
+
+    100% {
+        background-position: 10% 0%
+    }
+}
+
+/*а здесь заканчивается анимейшин*/
+main {
+    flex: 1 0 auto;
+    padding-top: 0px;
+}
+
+footer {
+    background-color: #121a26;
+    color: white;
+    flex: 0 0 auto;
+    height: 60px;
+    align-items: center;
+    opacity: 0.3;
+    box-shadow: 0px 5px 10px 0px rgb(17, 17, 17);
+}
+
+.footer-text {
+    padding-top: 15px;
+}
+
+.navbar {
+    position: fixed;
+    width: 100%;
+    color: #000;
+    opacity: 0.85;
+    height: 50px;
+    z-index: 12;
+}
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    height: 64px;
+    align-items: center;
+  }
+
+.items {
+    order: 2;
+    display: flex;
+    transform: translate(400%);
+}
+
+.items li {
+    list-style: none;
+    position: relative;
+    margin-left: 1.5rem;
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+}
+
+.items a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-weight: 500;
+    transition: color 0.3s ease-in-out;
+}
+
+.items a:hover {
+    color: #31e6c1;
+    transition: color 0.3s ease-in-out;
+}
+
+.arrow {
+    width: 2vmin;
+    height: 2vmin;
+    box-sizing: border-box;
+    position: absolute;
+    margin-left: 5%;
+    transform: rotate(-135deg);
+}
+
+.arrow::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    border-width: .8vmin .8vmin 0 0;
+    border-style: solid;
+    border-color: #fafafa;
+    transition: .2s ease;
+    display: block;
+    transform-origin: 100% 0;
+}
+
+
+.arrow::after {
+    content: '';
+    float: left;
+    position: relative;
+    top: -100%;
+    width: 100%;
+    height: 100%;
+    border-width: 0 .8vmin 0 0;
+    border-style: solid;
+    border-color: #fafafa;
+    transform-origin: 100% 0;
+    transition: .2s ease;
+}
+
+.arrow:hover::after {
+    transform: rotate(45deg);
+    border-color: orange;
+    height: 120%;
+}
+
+.arrow:hover::before {
+    border-color: orange;
+    transform: scale(.8);
+
+}
+.releases{
+    margin: 20%;
+    padding: 5%;
+    padding-left: 15%;
+    padding-right: 15%;
+    background-color: #42454b48;
+    border-radius: 2%;
+    box-shadow: 0px 10px 20px -10px rgba(0,0,0,0.75);
+    max-width: 100%;
+    padding-top: 10px;
+    position: relative;
+    text-align: center;
+}
+.card{
+    background-color: #231e397e;
+    border-radius: 5px;
+    box-shadow: 0px 10px 20px -10px rgba(0,0,0,0.75);
+    color: #B3B8CD;
+    padding-top: 10px;
+    height: 200px;
+    position: relative;
+    width: 400px;
+    max-width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.name{
+    color:#fff;
+}
+.git{
+    color:#fff;
+    background-color: #03BFCB;
+    border: 1px solid #03BFCB;
+    border-radius: 3px;
+    font-family: Montserrat, sans-serif;
+    font-weight: 500;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+.link{
+    color:#fff;
+    background-color: #03BFCB;
+    border: 1px solid #03BFCB;
+    border-radius: 3px;
+    font-family: Montserrat, sans-serif;
+    font-weight: 500;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+.description{
+    color:#fff;
+}
+.logo{
+width: 100px;
+}
