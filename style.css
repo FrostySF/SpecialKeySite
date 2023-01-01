@@ -246,7 +246,7 @@ footer {
 .menu {
   position: absolute;
   transform: translate(-1000%);
-  background-color: #121a26;
+  background-color: #1d1542;
   transition: 0.5s ease-in-out;
   width: 200px;
   height: 10000%;
