@@ -203,12 +203,14 @@ footer {
   font-weight: 500;
   transition: color 0.3s ease-in-out;
 }
-.menu-items .medeby{
+
+.menu-items .medeby {
   text-decoration: none;
   color: rgb(255, 255, 255);
   font-weight: 1;
   font-size: x-small;
 }
+
 .menu .menu-items .medeby:hover {
   color: #ffffff;
 }
@@ -247,7 +249,7 @@ footer {
   position: absolute;
   transform: translate(-1000%);
   background-color: #1d1542;
-  transition: 0.5s ease-in-out;
+  transition: 0.5s ease-out;
   width: 200px;
   height: 10000%;
   display: flex;
@@ -283,8 +285,8 @@ footer {
 /*Live Code Editor*/
 .livecode {
   margin-top: 5%;
-  margin-left: 20%;
-  margin-right: 20%;
+  margin-left: 10%;
+  margin-right: 10%;
   background-color: #151e332c;
   border-radius: 10px;
   border: 0px solid #ffffff;
@@ -299,20 +301,23 @@ footer {
   align-items: center;
   border: 0px solid #ffffff;
 }
-.titles{
+
+.titles {
   flex-direction: row;
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 .livecode .title {
   color: #ffffff;
   margin-left: 5px;
 }
+
 .livecode .title-output {
   color: #ffffff;
   margin-left: 150px;
-  margin:0 auto;
+  margin: 0 auto;
 }
 
 .lci .editor {
@@ -443,10 +448,12 @@ footer {
               #menu__toggle:checked~.menu {
                 transform: translate(-10%);
               }
-              .livecode{
+
+              .livecode {
                 margin-left: 2%;
                 margin-right: 2%;
               }
+
               .navbar {
                 padding-left: 20px;
                 padding-right: 40px;
@@ -461,10 +468,12 @@ footer {
                 .items {
                   transform: translate(200%);
                 }
-                .main-page{
-                  margin-left:2%;
-                  margin-right:2%;
+
+                .main-page {
+                  margin-left: 2%;
+                  margin-right: 2%;
                 }
+
                 #menu__toggle:checked~.menu {
                   transform: translate(-20%);
                 }
@@ -487,9 +496,11 @@ footer {
                   font-size: 1.2rem;
                   font-weight: 500;
                 }
-                .main-logo{
+
+                .main-logo {
                   width: 40%;
                 }
+
                 @media(max-width:712px) {
                   #menu__toggle:checked~.menu__btn {
                     transform: translate(640%);
