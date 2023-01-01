@@ -487,7 +487,9 @@ footer {
                   font-size: 1.2rem;
                   font-weight: 500;
                 }
-
+                .main-logo{
+                  max-width: 5%;
+                }
                 @media(max-width:712px) {
                   #menu__toggle:checked~.menu__btn {
                     transform: translate(640%);
