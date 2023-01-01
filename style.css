@@ -312,10 +312,20 @@ section{
 
 .livecode .title-output {
   color: #ffffff;
-  margin-left: 150px;
+  margin-left: 200px;
   margin: 0 auto;
 }
-
+.livecode .runcode{
+  color:#fff;
+  background-color: #03BFCB;
+  border: 1px solid #03BFCB;
+  border-radius: 3px;
+  font-family: Montserrat, sans-serif;
+  font-weight: 200;
+  padding: 5px 5px;
+  cursor: pointer;
+  margin: 1%;
+}
 .lci .editor {
   height: 100%;
   background-color: #30303096;
@@ -464,7 +474,10 @@ section{
                 .items {
                   transform: translate(200%);
                 }
+                section{
+                  height: 80vh;
 
+                }
                 .main-page {
                   margin-left: 2%;
                   margin-right: 2%;
