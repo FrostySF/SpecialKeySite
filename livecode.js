@@ -8,3 +8,6 @@ var output = ace.edit("output");
 output.setTheme("ace/theme/twilight");
 output.renderer.setShowGutter(false);
 output.setReadOnly(true);
+document.getElementById("runrun").onclick = function(){
+    output.setValue("@--\'"+editor.getValue()+"\'\n@твой код говно!!!");
+}

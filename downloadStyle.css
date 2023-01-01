@@ -143,21 +143,22 @@ footer {
 
 .arrow:hover::before {
     border-color: orange;
-    transform: scale(.8);
+    transform: scale(1);
 
 }
 .releases{
-    margin: 5% 20% 5% 20%;
+    border-radius: 2%;
+    margin: 10% 20% 5% 20%;
     padding-top: 5%;
     padding-bottom: 5%;
     padding-left: 15%;
     padding-right: 15%;
     background-color: #42454b48;
-    border-radius: 2%;
     box-shadow: 0px 10px 20px -10px rgba(0,0,0,0.75);
     max-width: 100%;
     position: relative;
     text-align: center;
+    backdrop-filter: blur(16px);
 }
 .card{
     background-color: #231e397e;
@@ -171,6 +172,7 @@ footer {
     max-width: 100%;
     text-align: center;
     margin-bottom: 10px;
+    backdrop-filter: blur(16px);
 }
 .name{
     color:#fff;

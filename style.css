@@ -10,7 +10,7 @@ body {
   scroll-behavior: smooth;
   height: 100%;
   overflow-x: hidden;
-  background-color: #17212f;
+  background-color: #000000;
   font-family: 'Poppins';
   height: 100%;
   width: 100%;
@@ -74,13 +74,13 @@ main {
 }
 
 footer {
-  background-color: #121a26;
+  background-color: #121a2685;
   color: white;
   flex: 0 0 auto;
   height: 60px;
   align-items: center;
-  opacity: 0.3;
-  box-shadow: 0px 5px 10px 0px rgb(17, 17, 17);
+  box-shadow: 0px 5px 10px 0px rgba(163, 132, 132, 0.37);
+  backdrop-filter: blur(16px);
 }
 
 .footer-text {
@@ -156,7 +156,6 @@ footer {
   position: fixed;
   width: 100%;
   color: #000;
-  opacity: 0.85;
   height: 50px;
   z-index: 12;
 }
@@ -177,7 +176,6 @@ footer {
 }
 
 #menu__toggle {
-
   opacity: 0;
 }
 
@@ -249,20 +247,21 @@ footer {
 .menu {
   position: absolute;
   transform: translate(-1000%);
-  background-color: #1d1542;
-  transition: 0.5s ease-out;
+  background-color: rgba(69, 4, 99, 0.4);
+  transition: 0.5s ease-in-out;
   width: 200px;
   height: 10000%;
   display: flex;
-  z-index: 9999999;
+  backdrop-filter: blur(16px);
+  box-shadow: 0px 5px 10px 0px rgb(17, 17, 17);
+  transition-duration: .35s;
 }
 
 .menu-items {
   padding-top: 1000%;
-  opacity: 0.85;
   flex-direction: column;
   margin-left: 30px;
-  padding-left: 5px;
+  padding-left: 1px;
 }
 
 /*sections*/
@@ -286,6 +285,7 @@ section{
   background-color: #151e332c;
   border-radius: 10px;
   border: 0px solid #ffffff;
+  backdrop-filter: blur(16px);
 }
 
 .lci {
@@ -307,12 +307,11 @@ section{
 
 .livecode .title {
   color: #ffffff;
-  margin-left: 5px;
+  margin: 0 auto;
 }
 
 .livecode .title-output {
   color: #ffffff;
-  margin-left: 200px;
   margin: 0 auto;
 }
 .livecode .runcode{
