@@ -461,7 +461,10 @@ footer {
                 .items {
                   transform: translate(200%);
                 }
-
+                .main-page{
+                  margin-left:2%;
+                  margin-right:2%;
+                }
                 #menu__toggle:checked~.menu {
                   transform: translate(-20%);
                 }
