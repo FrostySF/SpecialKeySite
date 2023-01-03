@@ -1,0 +1,101 @@
+@import url("https://fonts.googleapis.com/css?family=Bevan");
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: rgb(40,40,40);
+    overflow: hidden;
+    background: -webkit-linear-gradient(#1c397e, rgba(0, 0, 0, 0) 90%), -webkit-linear-gradient(-45deg, #C2553C 25%, #000 75%);
+    background: linear-gradient(#000000, rgba(0, 0, 0, 0) 90%), linear-gradient(-45deg, #C2553C 25%, #1c397e 89%);
+    /*если что эту анимейшин можешь убрать вот здесь начинается*/
+    background-size: 120% 120%;
+    -webkit-animation: Animation 100s alternate infinite;
+    animation: Animation 100s alternate infinite;
+  }
+  
+  @-webkit-keyframes Animation {
+    0% {
+      background-position: 10% 0%
+    }
+  
+    50% {
+      background-position: 56% 100%
+    }
+  
+    100% {
+      background-position: 10% 0%
+    }
+  }
+  
+  @keyframes Animation {
+    0% {
+      background-position: 10% 0%
+    }
+  
+    50% {
+      background-position: 76% 100%
+    }
+  
+    100% {
+      background-position: 10% 0%
+    }
+  }
+  
+  /*а здесь заканчивается анимейшин*/
+
+p {
+    font-family: "Bevan", cursive;
+    font-size: 130px;
+    margin: 10vh 0 0;
+    text-align: center;
+    letter-spacing: 5px;
+    background-color: rgb(116, 116, 116);
+    color: transparent;
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.1);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+}
+p  span {
+    font-size: 1em;
+}
+
+code {
+    color: #bdbdbd;
+    text-align: center;
+    display: block;
+    font-size: 16px;
+    margin: 0 30px 25px;
+}
+code  b {
+    color: #81a2be;
+    font-weight: 500;
+}
+code span {
+    color: #f0c674;
+}
+code i {
+    color: #b5bd68;
+}
+code em {
+    color: #b294bb;
+    font-style: unset;
+}
+a {
+    color: #8abeb7;
+    font-family: monospace;
+    font-size: 20px;
+    text-decoration: underline;
+    margin-top:10px;
+    display:inline-block
+}
+
+@media screen and (max-width: 880px) {
+    p {
+        font-size: 14vw;
+    }
+}
