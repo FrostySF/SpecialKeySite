@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>$MODULE_NAME$</title>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:400italic,400,700&subset=latin,cyrillic" rel="stylesheet"
+        type="text/css" />
+    <link type="text/css" rel="stylesheet" href="forum.css" />
+</head>
+
+<body>
+    <main>
+        <nav class="navbar">
+            <div class="navbar-container container">
+                <input id="menu__toggle" type="checkbox" />
+                <label class="menu__btn" for="menu__toggle">
+                    <span></span>
+                </label>
+                <div class="sf">
+                    <form class="searchform" onsubmit="event.preventDefault();" role="search">
+                        <label class="labelsearch" for="search">Search for stuff</label>
+                        <input class="searchinp" id="search" type="search" placeholder="Search..." autofocus required />
+                        <button class="searchbtn" type="submit">Go</button>    
+                    </form>
+                </div>
+                <div class="menu">
+                    <ul class="menu-items">
+                        <li><a href="/"><span>Главная страница</span></a></li>
+                        <li><a href="/index/0-2"><span>Информация о сайте</span></a></li>
+                        <li><a href="/blog"><span>Блог</span></a></li>
+                        <li><a class="uMenuItemA" href="/forum"><span>Форум</span></a></li>
+                        <li><a href="/index/0-3"><span>Обратная связь</span></a></li>
+                        <li> <a href="https://github.com/TiM-SyStEm/Special-Key-SPS/releases" target="_blank">Try
+                                Special Key</a> </li>
+                        <li> <a href="https://github.com/TiM-SyStEm/Special-Key-SPS/wiki" target="_blank">Docs</a> </li>
+                        <li> <a href="download.html" class="download" target="_parent">Versions</a></li>
+                        <li> <a href="https://www.youtube.com/@TIMSYSTEM"><img src="assets/youtube.png"
+                                    alt="YouTube"></a></li>
+                        <li> <a class="medeby" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Made by frostysf</a>
+                        </li>
+                        <li> <a class="medeby" href="https://www.youtube.com/watch?v=5ngWIDkPP3o">Made by program py</a>
+                        </li>
+                    </ul>
+                </div>
+        </nav>
+        <div class="content">
+            <div class="forum">
+                <table>
+                    <tr>
+                        <td width="5%" class="gTableSubTop">&nbsp;</td>
+                        <td class="gTableSubTop">Форум</td>
+                        <td width="8%" class="gTableSubTop" align="center">Темы</td>
+                        <td width="8%" class="gTableSubTop" align="center">Ответы</td>
+                    </tr>
+                    <tr>
+                        <td class="forumNameTd">
+                            <a class="forum" href="/forum/2">Test forum</a>
+
+
+                            <div class="forumDescr">Test forum description</div>
+                            <div class="subforumDescr">Подфорумы: <a href="/forum/3">Test subforum</a></div>
+
+                        </td>
+                        <td class="forumThreadTd" align="center">0</td>
+                        <td class="forumPostTd" align="center">0</td>
+                        <td class="forumLastPostTd">Нет сообщений
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <script async defer
+            src="https://www.google.com/recaptcha/api.js?onload=reCallback&render=explicit&hl=ru"></script>
+        <script>
+            /* --- UCOZ-JS-DATA --- */
+            window.uCoz = { "language": "ru", "ssid": "550067571361666570614", "site": { "host": "specialkey.moy.su", "domain": null, "id": "7specialkey" }, "country": "RU" };
+            /* --- UCOZ-JS-CODE --- */
+            function uSocialLogin(t) {
+                var params = { "yandex": { "height": 515, "width": 870 }, "ok": { "width": 710, "height": 390 }, "facebook": { "height": 520, "width": 950 }, "google": { "width": 700, "height": 600 }, "vkontakte": { "height": 400, "width": 790 } };
+                var ref = escape(location.protocol + '//' + ('specialkey.moy.su' || location.hostname) + location.pathname + ((location.hash ? (location.search ? location.search + '&' : '?') + 'rnd=' + Date.now() + location.hash : (location.search || ''))));
+                window.open('/' + t + '?ref=' + ref, 'conwin', 'width=' + params[t].width + ',height=' + params[t].height + ',status=1,resizable=1,left=' + parseInt((screen.availWidth / 2) - (params[t].width / 2)) + ',top=' + parseInt((screen.availHeight / 2) - (params[t].height / 2) - 20) + 'screenX=' + parseInt((screen.availWidth / 2) - (params[t].width / 2)) + ',screenY=' + parseInt((screen.availHeight / 2) - (params[t].height / 2) - 20));
+                return false;
+            }
+            function TelegramAuth(user) {
+                user['a'] = 9; user['m'] = 'telegram';
+                _uPostForm('', { type: 'POST', url: '/index/sub', data: user });
+            }
+            function loginPopupForm(params = {}) { new _uWnd('LF', ' ', -250, -100, { closeonesc: 1, resize: 1 }, { url: '/index/40' + (params.urlParams ? '?' + params.urlParams : '') }) }
+            function reCallback() {
+                $('.g-recaptcha').each(function (index, element) {
+                    element.setAttribute('rcid', index);
+
+                    if ($(element).is(':empty') && grecaptcha.render) {
+                        grecaptcha.render(element, {
+                            sitekey: element.getAttribute('data-sitekey'),
+                            theme: element.getAttribute('data-theme'),
+                            size: element.getAttribute('data-size')
+                        });
+                    }
+
+                });
+            }
+            function reReset(reset) {
+                reset && grecaptcha.reset(reset.previousElementSibling.getAttribute('rcid'));
+                if (!reset) for (rel in ___grecaptcha_cfg.clients) grecaptcha.reset(rel);
+            }
+        </script>
+        <div class="usermenu" align="center">
+            <a title="Регистрация" href="/register">Регистрация
+            </a> | <a title="Вход" href="javascript:;" rel="nofollow" onclick="loginPopupForm(); return false;">
+                Вход</a>
+        </div>
+    </main>
+    <footer>
+        <div align="center" class="footer-text">
+            <span class="copyright">2023 &copy; TiM-SyStEm</span> | <span class="powered-by">
+                <span class="pb3WP4L1">Хостинг от <a href="https://www.ucoz.ru/">uCoz</a></span>
+            </span>
+        </div>
+    </footer>
+</body>
+</html>
