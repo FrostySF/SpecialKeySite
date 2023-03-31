@@ -5,7 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles/style.css">
     <link rel="shortcut icon" href="assets/logo.png" type="image/png">
     <title>Special-Key</title>
     <script src="lib/ace/ace.js" type="text/javascript" charset="utf-8"></script>
@@ -13,59 +15,75 @@
 
 <body>
     <main>
-        <nav class="navbar">
-            <div class="navbar-container container">
-                <input id="menu__toggle" type="checkbox" />
-                    <label class="menu__btn" for="menu__toggle">
-                        <span></span>
-                    </label>
-                    <ul class="items">
-                        <li> <a href="download.html" class="download" target="_parent">Versions</a></li>
-                        <li> <a href="https://github.com/TiM-SyStEm/Special-Key-SPS/releases" target="_blank">Try Special
-                                Key</a> </li>
-                        <li> <a href="https://github.com/TiM-SyStEm/Special-Key-SPS/wiki" target="_blank">Docs</a> </li>
-                        <li> <a href="https://www.youtube.com/@TIMSYSTEM">YouTube</a></li>
-                    </ul>
-                <div class="menu">
-                    <ul class="menu-items">
-                        <li> <a href="https://github.com/TiM-SyStEm/Special-Key-SPS/releases" target="_blank">Try
-                                Special Key</a> </li>
-                        <li> <a href="https://github.com/TiM-SyStEm/Special-Key-SPS/wiki" target="_blank">Docs</a> </li>
-                        <li> <a href="download.html" class="download" target="_parent">Versions</a></li>
-                        <li> <a href="#showcase">Home</a> </li>
-                        <li> <a href="#dev-ersi">Developers</a> </li>
-                        <li> <a href="#dide-seci">IDE</a> </li>
-                        <li> <a href="#about-seci">About</a> </li>
-                        <li> <a href="https://www.youtube.com/@TIMSYSTEM">YouTube</a></li>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Special-Key</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="download.html">Versions</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://github.com/TiM-SyStEm/Special-Key-SPS/releases">GitHub</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://github.com/TiM-SyStEm/Special-Key-SPS/wiki">Wiki</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Sections
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="#showcase">Home</a></li>
+                                <li><a class="dropdown-item" href="#dev-ersi">Developers</a></li>
+                                <li><a class="dropdown-item" href="#dide-seci">IDE</a></li>
+                                <li><a class="dropdown-item" href="#about-seci">About</a></li>
+                            </ul>
+                        </li>
                     </ul>
                 </div>
             </div>
         </nav>
+
+        <div class="container">
         <section class="showcase-area" id="showcase">
             <div class="main-page">
                 <div class="special-key-logo" align="center">
-                    <img src="assets/icoLOGO.png" class="main-logo" alt="Special Key">
+                    <img src="assets/ico.png" class="main-logo" alt="Special Key">
                 </div>
                 <div class="about-lang" align="center">
                     <h4>
                         Special Key is a dynamic, fast and object-oriented programming language for building versatile
                         and fast applications! It is in heavy develpoment now, but ready to try out!
                     </h4>
+                    <button class="btn"
+                        onclick="window.location.href='https://github.com/TiM-SyStEm/Special-Key-SPS/releases/download/v3-beta.1/SpecialKey.jar';">Download
+                        latest</button>
                 </div>
-                <div class="livecode">
+                <div class="list livecode container-fluid bg-dark">
                     <div class="titles">
                         <div class="title">Live Code</div>
-                        <div class="title-output">Output</div>
+                        <div class="title">Output</div>
                         <button class="runcode" id="runrun">Run Code</button>
                     </div>
                     <div class="lci">
                         <div class="editor" id="editor"></div>
                         <div class="output" id="output"></div>
-                        <script src="livecode.js"></script>
+                        <script src="js/livecode.js"></script>
                     </div>
                 </div>
             </div>
         </section>
+
         <section class="dev-ers" id="dev-ersi">
             <div align="center" class="text">
                 <h1>Developers</h1>
@@ -82,13 +100,14 @@
             <div align="center" class="text">
                 <h1>About</h1>
                 <p>Our team is very small, we will be grateful if you help us with the language. Thanks.</p>
-                 <div class="orbs">             
+                <div class="orbs">
                     <div class="one"></div>
                     <div class="two"></div>
                     <div class="three"></div>
-                 </div>
-            </div>    
+                </div>
+            </div>
         </section>
+        </div>
     </main>
     <footer>
         <div align="center" class="footer-text">
@@ -97,6 +116,9 @@
             <a class="medeby" href="https://www.youtube.com/watch?v=5ngWIDkPP3o">Made by program py</a>
         </div>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>

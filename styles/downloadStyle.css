@@ -5,6 +5,17 @@
     margin: 0;
 }
 
+/*делаю свой "scrollbar"*/
+::-webkit-scrollbar {
+    width: 2px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background-color: rgb(52, 0, 65);
+    border-radius: 20px;
+    border: 1px solid rgb(52, 0, 65);
+    backdrop-filter: blur(16px);
+  }
+
 html,
 body {
     height: 100%;
@@ -53,6 +64,10 @@ body {
 
   
 /*а здесь заканчивается анимейшин*/
+
+a{
+    text-decoration: none;
+}
 main {
     flex: 1 0 auto;
     padding-top: 0px;
@@ -84,75 +99,13 @@ footer {
     padding-top: 15px;
 }
 
-.navbar {
-    position: fixed;
-    width: 100%;
-    color: #000;
-    opacity: 0.85;
-    height: 50px;
-    z-index: 12;
-}
-.navbar-container {
-    display: flex;
-    justify-content: space-between;
-    height: 64px;
-    align-items: center;
-  }
-
-.arrow {
-    width: 2vmin;
-    height: 2vmin;
-    box-sizing: border-box;
-    position: absolute;
-    margin-left: 5%;
-    transform: rotate(-135deg);
-}
-
-.arrow::before {
-    content: '';
-    width: 100%;
-    height: 100%;
-    border-width: .8vmin .8vmin 0 0;
-    border-style: solid;
-    border-color: #fafafa;
-    transition: .2s ease;
-    display: block;
-    transform-origin: 100% 0;
-}
-
-
-.arrow::after {
-    content: '';
-    float: left;
-    position: relative;
-    top: -100%;
-    width: 100%;
-    height: 100%;
-    border-width: 0 .8vmin 0 0;
-    border-style: solid;
-    border-color: #fafafa;
-    transform-origin: 100% 0;
-    transition: .2s ease;
-}
-
-.arrow:hover::after {
-    transform: rotate(45deg);
-    border-color: orange;
-    height: 120%;
-}
-
-.arrow:hover::before {
-    border-color: orange;
-    transform: scale(1);
-
-}
 .releases{
-    border-radius: 2%;
-    margin: 10% 20% 5% 20%;
+    border-radius: 10px;
+    margin: 10% 25% 5% 25%;
     padding-top: 5%;
     padding-bottom: 5%;
-    padding-left: 15%;
-    padding-right: 15%;
+    padding-left: 5%;
+    padding-right: 5%;
     background-color: #42454b48;
     box-shadow: 0px 10px 20px -10px rgba(0,0,0,0.75);
     max-width: 100%;
@@ -162,15 +115,10 @@ footer {
 }
 .card{
     background-color: #231e397e;
-    border-radius: 5px;
     box-shadow: 0px 10px 20px -10px rgba(0,0,0,0.75);
     color: #B3B8CD;
     padding-top: 10px;
-    height: 200px;
-    position: relative;
-    width: 1000px;
     max-width: 100%;
-    text-align: center;
     margin-bottom: 10px;
     backdrop-filter: blur(16px);
 }
@@ -211,6 +159,6 @@ width: 100px;
     padding-right: 2%;
 }
 .card{
-    height:250px;
+    height:280px;
 }
 }

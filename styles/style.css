@@ -1,0 +1,297 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Roboto:wght@300;400;700&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+/*делаю свой "scrollbar"*/
+::-webkit-scrollbar {
+  width: 2px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgb(52, 0, 65);
+  border-radius: 20px;
+  border: 1px solid rgb(52, 0, 65);
+  backdrop-filter: blur(16px);
+}
+
+html,
+body {
+  overflow-x: hidden;
+  background-color: #000000;
+  font-family: 'Poppins';
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background: -webkit-linear-gradient(#1c397e, rgba(0, 0, 0, 0) 90%), -webkit-linear-gradient(-45deg, #C2553C 25%, #000 75%);
+  background: linear-gradient(#000000, rgba(0, 0, 0, 0) 90%), linear-gradient(-45deg, #C2553C 25%, #1c397e 89%);
+  /*если что эту анимейшин можешь убрать вот здесь начинается*/
+  background-size: 120% 120%;
+  -webkit-animation: Animation 100s alternate infinite;
+  animation: Animation 100s alternate infinite;
+}
+
+@-webkit-keyframes Animation {
+  0% {
+    background-position: 10% 0%
+  }
+
+  50% {
+    background-position: 56% 100%
+  }
+
+  100% {
+    background-position: 10% 0%
+  }
+}
+
+@keyframes Animation {
+  0% {
+    background-position: 10% 0%
+  }
+
+  50% {
+    background-position: 76% 100%
+  }
+
+  100% {
+    background-position: 10% 0%
+  }
+}
+
+/*а здесь заканчивается анимейшин*/
+main {
+  flex: 1 1 auto;
+}
+
+.about-lang {
+  color: white;
+  padding-top: 5px;
+}
+
+.main-logo {
+  display: flex;
+  object-fit: contain;
+}
+
+.main-page {
+  margin: 50px;
+}
+
+footer {
+  background-color: #121a2685;
+  color: white;
+  flex: 0 0 auto;
+  height: 60px;
+  align-items: center;
+  box-shadow: 0px 5px 10px 0px rgba(163, 132, 132, 0.37);
+  backdrop-filter: blur(16px);
+}
+
+.footer-text {
+  padding-top: 15px;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  width: 100%;
+  margin: auto;
+}
+
+/*sections*/
+
+section {
+  height: 110vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.text {
+  color: #fff;
+}
+
+/*Animation Orbs*/
+.orbs {
+  margin-top: 15%;
+}
+
+.one {
+  width: 15px;
+  height: 15px;
+  background: #fff;
+  border-radius: 50%;
+  animation: anim 3.5s infinite;
+  animation-delay: 0.5s;
+  box-shadow: 0px 5px 10px 5px rgb(255, 255, 255);
+}
+
+.two {
+  width: 15px;
+  height: 15px;
+  background: rgb(0, 47, 255);
+  border-radius: 50%;
+  animation: animOne 3s infinite;
+  animation-delay: 0.2s;
+  box-shadow: 0px 5px 10px 5px rgb(0, 47, 255);
+}
+
+.three {
+  width: 15px;
+  height: 15px;
+  background: rgb(255, 0, 0);
+  border-radius: 50%;
+  animation: animOne 3s infinite;
+  box-shadow: 0px 5px 10px 5px rgb(255, 0, 0);
+}
+
+@keyframes animOne {
+  0% {
+    transform-origin: 90% 80%;
+    transform: rotate(90);
+  }
+
+  70% {
+    transform: rotate(360deg);
+    transform-origin: 200% 60%;
+  }
+
+  70.1% {
+    transform-origin: -400% 50%;
+  }
+}
+
+@keyframes anim {
+  0% {
+    transform-origin: 400% 50%;
+    transform: rotate(0);
+  }
+
+  40% {
+    transform: rotate(360deg);
+    transform-origin: 200% 50%;
+  }
+
+  40.1% {
+    transform-origin: -400% 10%;
+  }
+}
+
+/*Live Code Editor*/
+.livecode {
+  margin-top: 5%;
+  background-color: #151e332c;
+  border-radius: 10px;
+}
+
+.lci {
+  height: 200px;
+  border-radius: 10px;
+  flex-direction: row;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.titles {
+  flex-direction: row;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.livecode .title {
+  color: #ffffff;
+  margin: 0 auto;
+}
+
+.lci .editor {
+  height: 98%;
+  background-color: #30303096;
+  width: 50%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  white-space: pre;
+  box-shadow: 0 1px 1px rgb(22, 22, 22);
+  outline: none;
+  border-right: #ffffff;
+}
+
+.lci .output {
+  height: 98%;
+  background-color: #1b1b1b96;
+  width: 50%;
+  overflow-y: auto;
+  white-space: pre;
+  right: 0;
+  box-shadow: 0 1px 1px rgb(22, 22, 22);
+}
+
+.runcode {
+  color: #fff;
+  background-color: #03BFCB;
+  border: 1px solid #03BFCB;
+  border-radius: 8px;
+  font-family: Montserrat, sans-serif;
+  font-weight: 200;
+  padding: 5px 5px;
+  cursor: pointer;
+}
+
+.btn {
+  color: #fff;
+  background-color: #4a0b9c;
+  border: 1px solid #4a0b9c;
+  border-radius: 8px;
+  font-family: Montserrat, sans-serif;
+  font-weight: 500;
+  padding: 10px 10px;
+  cursor: pointer;
+  width: 130px;
+}
+
+.medeby {
+  text-decoration: none;
+  color: #fff;
+}
+
+@media (max-width: 750px) {
+
+  .container{
+    margin-top: 2.3rem;
+  }
+  section {
+    height: 80vh;
+  }
+
+  .main-page {
+    margin-left: 2%;
+    margin-right: 2%;
+  }
+
+  .main-logo {
+    width: 40%;
+  }
+
+  @media (max-width: 540px) {
+    html {
+      font-size: 0.8rem;
+    }
+
+    .main-logo {
+      display: flex;
+      max-width: 80%;
+      object-fit: contain;
+    }
+  }
+}
