@@ -1,74 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Roboto:wght@300;400;700&display=swap');
 
-* {
-  padding: 0;
-  margin: 0;
+*{
+  color: #eee;
 }
 
-/*делаю свой "scrollbar"*/
-::-webkit-scrollbar {
-  width: 2px;
-}
-
-::-webkit-scrollbar-thumb {
-  background-color: rgb(52, 0, 65);
-  border-radius: 20px;
-  border: 1px solid rgb(52, 0, 65);
-  backdrop-filter: blur(16px);
-}
-
-html,
-body {
-  overflow-x: hidden;
-  background-color: #000000;
+html{
   font-family: 'Poppins';
-  height: 100%;
-  width: 100%;
+}
+
+body {
   display: flex;
   flex-direction: column;
-  background: -webkit-linear-gradient(#1c397e, rgba(0, 0, 0, 0) 90%), -webkit-linear-gradient(-45deg, #C2553C 25%, #000 75%);
-  background: linear-gradient(#000000, rgba(0, 0, 0, 0) 90%), linear-gradient(-45deg, #C2553C 25%, #1c397e 89%);
-  /*если что эту анимейшин можешь убрать вот здесь начинается*/
-  background-size: 120% 120%;
-  -webkit-animation: Animation 100s alternate infinite;
-  animation: Animation 100s alternate infinite;
+  background: rgb(22, 22, 22);
 }
 
-@-webkit-keyframes Animation {
-  0% {
-    background-position: 10% 0%
-  }
-
-  50% {
-    background-position: 56% 100%
-  }
-
-  100% {
-    background-position: 10% 0%
-  }
-}
-
-@keyframes Animation {
-  0% {
-    background-position: 10% 0%
-  }
-
-  50% {
-    background-position: 76% 100%
-  }
-
-  100% {
-    background-position: 10% 0%
-  }
-}
-
-/*а здесь заканчивается анимейшин*/
 main {
   flex: 1 1 auto;
 }
 
 .about-lang {
-  color: white;
   padding-top: 5px;
 }
 
@@ -82,25 +32,13 @@ main {
 }
 
 footer {
-  background-color: #121a2685;
-  color: white;
   flex: 0 0 auto;
   height: 60px;
   align-items: center;
-  box-shadow: 0px 5px 10px 0px rgba(163, 132, 132, 0.37);
-  backdrop-filter: blur(16px);
 }
 
 .footer-text {
   padding-top: 15px;
-}
-
-*,
-*::after,
-*::before {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
 }
 
 .container {
@@ -117,20 +55,19 @@ section {
   align-items: center;
 }
 
-.text {
-  color: #fff;
-}
-
 /*Live Code Editor*/
 .livecode {
   margin-top: 5%;
-  background-color: #151e332c;
+  background-color: --bs-danger;
   border-radius: 10px;
 }
 
 .lci {
   height: 200px;
   border-radius: 10px;
+  margin-left: 3px;
+  margin-right: 3px;
+  margin-bottom: 3px;
   flex-direction: row;
   display: flex;
   justify-content: center;
@@ -145,63 +82,38 @@ section {
 }
 
 .livecode .title {
-  color: #ffffff;
   margin: 0 auto;
 }
 
 .lci .editor {
+  border-radius: 10px 0 0 10px;
   height: 98%;
-  background-color: #30303096;
+  background-color: --bs-danger;
   width: 50%;
   overflow-x: hidden;
   overflow-y: auto;
   white-space: pre;
-  box-shadow: 0 1px 1px rgb(22, 22, 22);
   outline: none;
   border-right: #ffffff;
 }
 
 .lci .output {
+  border-radius: 0 10px 10px 0;
   height: 98%;
   background-color: #1b1b1b96;
   width: 50%;
   overflow-y: auto;
   white-space: pre;
   right: 0;
-  box-shadow: 0 1px 1px rgb(22, 22, 22);
 }
 
 .runcode {
-  color: #fff;
-  background-color: #03BFCB;
-  border: 1px solid #03BFCB;
-  border-radius: 8px;
-  font-family: Montserrat, sans-serif;
-  font-weight: 200;
-  padding: 5px 5px;
-  cursor: pointer;
-}
-
-.btn {
-  color: #fff;
-  background-color: #4a0b9c;
-  border: 1px solid #4a0b9c;
-  border-radius: 8px;
-  font-family: Montserrat, sans-serif;
-  font-weight: 500;
-  padding: 10px 10px;
-  cursor: pointer;
-  width: 130px;
+  margin: 3px;
 }
 
 .medeby {
   text-decoration: none;
-  color: #fff;
-}
-
-canvas {
-  width: 100%;
-  height: 100%;
+  color: #eee;
 }
 
 @media (max-width: 750px) {

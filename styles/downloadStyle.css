@@ -1,20 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Roboto:wght@300;400;700&display=swap');
 
-* {
-    padding: 0;
-    margin: 0;
+*{
+    color: #eee;
 }
-
-/*делаю свой "scrollbar"*/
-::-webkit-scrollbar {
-    width: 2px;
-  }
-  ::-webkit-scrollbar-thumb {
-    background-color: rgb(52, 0, 65);
-    border-radius: 20px;
-    border: 1px solid rgb(52, 0, 65);
-    backdrop-filter: blur(16px);
-  }
 
 html,
 body {
@@ -26,139 +14,66 @@ body {
     width: 100%;
     display: flex;
     flex-direction: column;
-    background: -webkit-linear-gradient(#1c397e, rgba(0, 0, 0, 0) 90%), -webkit-linear-gradient(-45deg, #C2553C 25%, #000 75%);
-    background: linear-gradient(#000000, rgba(0, 0, 0, 0) 90%), linear-gradient(-45deg, #C2553C 25%, #1c397e 89%);
-    /*если что эту анимейшин можешь убрать вот здесь начинается*/
-    background-size: 120% 120%;
-    -webkit-animation: Animation 100s alternate infinite;
-    animation: Animation 100s alternate infinite;
+    background: rgb(17, 17, 17);
 }
 
-@-webkit-keyframes Animation {
-    0% {
-        background-position: 10% 0%
-    }
-
-    50% {
-        background-position: 56% 100%
-    }
-
-    100% {
-        background-position: 10% 0%
-    }
-}
-
-@keyframes Animation {
-    0% {
-        background-position: 10% 0%
-    }
-
-    50% {
-        background-position: 76% 100%
-    }
-
-    100% {
-        background-position: 10% 0%
-    }
-}
-
-  
-/*а здесь заканчивается анимейшин*/
-
-a{
+a {
     text-decoration: none;
 }
+
 main {
     flex: 1 0 auto;
     padding-top: 0px;
 }
-*,
-*::after,
-*::before {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
 
 .container {
-  max-width: 1000px;
-  width: 100%;
-  margin: auto;
+    max-width: 1000px;
+    width: 100%;
+    margin: auto;
 }
+
 footer {
-    background-color: #121a26;
-    color: white;
     flex: 0 0 auto;
     height: 60px;
     align-items: center;
-    opacity: 0.3;
-    box-shadow: 0px 5px 10px 0px rgb(17, 17, 17);
 }
 
 .footer-text {
     padding-top: 15px;
 }
 
-.releases{
+.releases {
     border-radius: 10px;
-    margin: 10% 25% 5% 25%;
-    padding-top: 5%;
-    padding-bottom: 5%;
-    padding-left: 5%;
-    padding-right: 5%;
+    margin: 5% 15% 5% 15%;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    padding-left: 3%;
+    padding-right: 3%;
     background-color: #42454b48;
-    box-shadow: 0px 10px 20px -10px rgba(0,0,0,0.75);
     max-width: 100%;
     position: relative;
-    text-align: center;
-    backdrop-filter: blur(16px);
 }
-.card{
-    background-color: #231e397e;
-    box-shadow: 0px 10px 20px -10px rgba(0,0,0,0.75);
+
+.card {
+    background-color: #2020207e;
+    box-shadow: 0px 5px 15px -10px rgba(0, 0, 0, 0.75);
     color: #B3B8CD;
     padding-top: 10px;
     max-width: 100%;
     margin-bottom: 10px;
-    backdrop-filter: blur(16px);
 }
-.name{
-    color:#fff;
+
+.logo {
+    width: 100px;
+    margin-left: 3px;
 }
-.git{
-    color:#fff;
-    background-color: #03BFCB;
-    border: 1px solid #03BFCB;
-    border-radius: 3px;
-    font-family: Montserrat, sans-serif;
-    font-weight: 500;
-    padding: 10px 15px;
-    cursor: pointer;
-}
-.link{
-    color:#fff;
-    background-color: #03BFCB;
-    border: 1px solid #03BFCB;
-    border-radius: 3px;
-    font-family: Montserrat, sans-serif;
-    font-weight: 500;
-    padding: 10px 15px;
-    cursor: pointer;
-}
-.description{
-    color:#fff;
-}
-.logo{
-width: 100px;
-}
-@media(max-width:800px){ 
-    .releases{
-    margin-left: 2%;
-    margin-right: 2%;
-    padding-left: 2%;
-    padding-right: 2%;
-}
-.card{
-    height:280px;
-}
+
+@media(max-width:800px) {
+    .releases {
+        margin-left: 2%;
+        margin-right: 2%;
+        padding-left: 2%;
+        padding-right: 2%;
+    }
+
 }

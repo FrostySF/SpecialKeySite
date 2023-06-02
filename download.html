@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/showdown@1.9.0/dist/showdown.min.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
     <link rel="stylesheet" href="styles/downloadStyle.css">
@@ -40,103 +42,39 @@
                 </div>
             </div>
         </nav>
-        <div class="releases">
-            <div class="card">
+        <div class="releases" id="releases">
+            <div class="card" style="display:none;" id="card">
                 <img src="assets/ico.png" class="card-img-top logo" alt="assets/ico.png">
                 <div class="card-body">
-                    <h5 class="card-title">Special Key SPS 3 beta</h5>
-                    <p class="card-text">Pre-release -Обратите внимание IDE не идёт в комплекте т.к разрабатывается</p>
-                    <a href="https://github.com/TiM-SyStEm/Special-Key-SPS/releases/download/v3-beta.1/SpecialKey.jar"
-                        class="btn btn-primary">Download</a>
+                    <h5 id="card-title" class="card-title">NEVER GONNA GIVE UP</h5>
+                    <p id="card-text" class="card-text"></p>
+                    <a id="get" class="btn btn-primary">Download</a>
                     <a href="https://github.com/TiM-SyStEm/Special-Key-SPS/releases" class="btn btn-primary">GitHub</a>
                 </div>
             </div>
-            <div class="card">
-                <img src="assets/ico.png" class="card-img-top logo" alt="assets/ico.png">
-                <div class="card-body">
-                    <h5 class="card-title">Special Key SPS 2 path1</h5>
-                    <p class="card-text"></p>
-                    <a href="https://github.com/TiM-SyStEm/Special-Key-SPS/releases/download/v2.1.0/SpecialKey-SPS2-patch1.zip"
-                        class="btn btn-primary">Download</a>
-                    <a href="https://github.com/TiM-SyStEm/Special-Key-SPS/releases" class="btn btn-primary">GitHub</a>
-                </div>
-            </div>
-            <div class="card">
-                <img src="assets/ico.png" class="card-img-top logo" alt="assets/ico.png">
-                <div class="card-body">
-                    <h5 class="card-title">Special Key SPS 2</h5>
-                    <p class="card-text"></p>
-                    <a href="https://github.com/TiM-SyStEm/Special-Key-SPS/releases/download/v2.0.3/Special-Key-SPS2.zip"
-                        class="btn btn-primary">Download</a>
-                    <a href="https://github.com/TiM-SyStEm/Special-Key-SPS/releases" class="btn btn-primary">GitHub</a>
-                </div>
-            </div>
-            <div class="card">
-                <img src="assets/ico.png" class="card-img-top logo" alt="assets/ico.png">
-                <div class="card-body">
-                    <h5 class="card-title">Special Key SPS 2 betea3</h5>
-                    <p class="card-text">Pre-release</p>
-                    <a href="https://github.com/TiM-SyStEm/Special-Key-SPS/releases/download/v2.0.2/SpecialKey-SPS2-beta3.zip"
-                        class="btn btn-primary">Download</a>
-                    <a href="https://github.com/TiM-SyStEm/Special-Key-SPS/releases" class="btn btn-primary">GitHub</a>
-                </div>
-            </div>
-            <div class="card">
-                <img src="assets/ico.png" class="card-img-top logo" alt="assets/ico.png">
-                <div class="card-body">
-                    <h5 class="card-title">Special Key SPS 2 beta1</h5>
-                    <p class="card-text">Pre-release</p>
-                    <a href="https://github.com/TiM-SyStEm/Special-Key-SPS/releases/download/v2.0.1/SpecialKey-SPS2-beta1.zip"
-                        class="btn btn-primary">Download</a>
-                    <a href="https://github.com/TiM-SyStEm/Special-Key-SPS/releases" class="btn btn-primary">GitHub</a>
-                </div>
-            </div>
-            <div class="card">
-                <img src="assets/ico.png" class="card-img-top logo" alt="assets/ico.png">
-                <div class="card-body">
-                    <h5 class="card-title">Special Key SPS</h5>
-                    <p class="card-text"></p>
-                    <a href="https://github.com/TiM-SyStEm/Special-Key-SPS/releases/download/v1.0/SpecialKey-SPS1"
-                        class="btn btn-primary">Download</a>
-                    <a href="https://github.com/TiM-SyStEm/Special-Key-SPS/releases" class="btn btn-primary">GitHub</a>
-                </div>
-            </div>
-            <div class="card">
-                <img src="assets/ico.png" class="card-img-top logo" alt="assets/ico.png">
-                <div class="card-body">
-                    <h5 class="card-title">Special Key SPS beta3</h5>
-                    <p class="card-text">Pre-release</p>
-                    <a href="https://github.com/TiM-SyStEm/Special-Key-SPS/releases/download/v0.1.3/SpecialKey-SPS1-beta3"
-                        class="btn btn-primary">Download</a>
-                    <a href="https://github.com/TiM-SyStEm/Special-Key-SPS/releases" class="btn btn-primary">GitHub</a>
-                </div>
-            </div>
-            <div class="card">
-                <img src="assets/ico.png" class="card-img-top logo" alt="assets/ico.png">
-                <div class="card-body">
-                    <h5 class="card-title">Special Key SPS beta2</h5>
-                    <p class="card-text">Pre-release</p>
-                    <a href="https://github.com/TiM-SyStEm/Special-Key-SPS/releases/download/v0.1.3/SpecialKey-SPS1-beta2.zip"
-                        class="btn btn-primary">Download</a>
-                    <a href="https://github.com/TiM-SyStEm/Special-Key-SPS/releases" class="btn btn-primary">GitHub</a>
-                </div>
-            </div>
-             <div class="card">
-                <img src="assets/ico.png" class="card-img-top logo" alt="assets/ico.png">
-                <div class="card-body">
-                    <h5 class="card-title">Special Key SPS beta1</h5>
-                    <p class="card-text">Pre-release</p>
-                    <a href="https://github.com/TiM-SyStEm/Special-Key-SPS/releases/download/v0.1.3/SpecialKey-SPS1-beta1.zip"
-                        class="btn btn-primary">Download</a>
-                    <a href="https://github.com/TiM-SyStEm/Special-Key-SPS/releases" class="btn btn-primary">GitHub</a>
-                </div>
-            </div>
+            <script>
+                $.get('https://api.github.com/repos/TiM-SyStEm/Special-Key-SPS/releases', function (data) {  
+                    for (var i in data) {
+                        template = $("#card").clone();
+                        $("#card").css({
+                            "display": ""
+                        });
+                        $('#card-title').text(data[i].name);
+                        var converter = new showdown.Converter(), text = data[i].body, html = converter.makeHtml(text);
+                        $(html).appendTo('#card-text');
+                        $('#get').attr('href', data[i].assets[0].browser_download_url);
+                        template.attr("id", data[i].node_id);
+                        template.appendTo("#releases");
+                        console.log(data[i]);
+                    }
+                });
+            </script>
         </div>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N"
-            crossorigin="anonymous"></script>
+            integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous">
+        </script>
     </main>
-    <footer>
+    <footer class="bg-dark">
         <div align="center" class="footer-text">
             <a>2022 &copy; TiM-SyStEm</a>
         </div>
