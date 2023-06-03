@@ -47,7 +47,7 @@
                 <img src="assets/ico.png" class="card-img-top logo" alt="assets/ico.png">
                 <div class="card-body">
                     <h5 id="card-title" class="card-title">NEVER GONNA GIVE UP</h5>
-                    <p id="card-text" class="card-text"></p>
+                    <div id="card-text" class="card-text"></div>
                     <a id="get" class="btn btn-primary">Download</a>
                     <a href="https://github.com/TiM-SyStEm/Special-Key-SPS/releases" class="btn btn-primary">GitHub</a>
                 </div>
@@ -60,8 +60,7 @@
                             "display": ""
                         });
                         $('#card-title').text(data[i].name);
-                        var converter = new showdown.Converter(), text = data[i].body, html = converter.makeHtml(text);
-                        $(html).appendTo('#card-text');
+                        $('#card-text').html(new showdown.Converter().makeHtml(data[i].body));
                         $('#get').attr('href', data[i].assets[0].browser_download_url);
                         template.attr("id", data[i].node_id);
                         template.appendTo("#releases");
